@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "Order"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "orderId": {
+      "type": "string",
+      "unique": true
+    },
+    "items": {
+      "type": "json"
+    },
+    "total": {
+      "type": "decimal"
+    },
+    "customerName": {
+      "type": "string"
+    },
+    "customerEmail": {
+      "type": "email"
+    },
+    "address": {
+      "type": "text"
+    },
+    "orderStatus": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "paid",
+        "shipped",
+        "completed",
+        "canceled"
+      ]
+    },
+    "paymentIntentId": {
+      "type": "string"
+    },
+    "shippingMethod": {
+      "type": "string"
+    }
+  }
+}
